@@ -9,7 +9,7 @@ class PostsController extends AppController {
     }
 
     public function post($id = null) {
-        $post = $this->Posts->get($id, ["contain" => "Comments"]);
+        $post = $this->Posts->get($id, ["contain" => ["Comments" => ["Users"]]]);
         $this->set(compact('post'));
     }
 

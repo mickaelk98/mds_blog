@@ -31,7 +31,7 @@ class UsersTable extends Table
             ->maxLength('title', 150, 'Le titre ne doit pas dépasser 150 caractères')
             ->notEmptyString('password', 'Un contenu est requis')
             ->minLength('password', 5, 'Le contenu doit comporter au moins 3 caractères')
-            ->maxLength('title', 128, 'Le titre ne doit pas dépasser 150 caractères');
+            ->maxLength('title', 128, 'Le titre ne doit pas dépasser 128 caractères');
 
             
         return $validator;
